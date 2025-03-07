@@ -1,0 +1,124 @@
+
+.spotify-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px; 
+  border-radius: 50%;
+  border: 4px solid #ff1493;
+  box-shadow: 4px 4px 0px #ff69b4, 8px 8px 0px #ff1493;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out; 
+  background-color: #ffdde1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; 
+  flex-direction: column; 
+  z-index: 999;
+}
+
+.spotify-player .bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.spotify-player .content {
+  position: relative;
+  z-index: 2;
+  display: none; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 10px; 
+  height: auto; 
+  width: 100%;
+  max-height: none; 
+}
+
+.spotify-player .inline-image {
+  width: 60px; 
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 4px solid #ff1493;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px; 
+}
+
+.spotify-player:hover .inline-image {
+  width: 120px; 
+  height: 120px;
+  margin-bottom: 25px; 
+}
+
+.spotify-player .content p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  color: #ff1493;
+  background: #fff;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 2px solid #ff69b4;
+  box-shadow: 2px 2px 0px #ff1493;
+  margin: 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  max-width: 200px; 
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; 
+  height: auto;
+  max-height: 100px; 
+  line-height: 18px;
+}
+
+
+.spotify-player:hover .content p {
+  opacity: 1;
+  height: auto; 
+}
+
+.spotify-player .content button {
+  background-color: #ff1493;
+  border: 3px solid #ff69b4;
+  border-radius: 8px;
+  padding: 10px 12px; 
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #ff69b4, 4px 4px 0px #c71585;
+  font-size: 18px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  margin-top: 15px;
+  opacity: 0; 
+}
+
+.spotify-player:hover .content button {
+  opacity: 1;
+}
+
+.spotify-player:hover {
+  width: 220px;
+  height: 260px;
+  border-radius: 12px;
+  padding: 30px 20px; 
+
+}
+
+.spotify-player:hover .bg-image {
+  opacity: 0;
+}
+
+.spotify-player:hover .content {
+  display: flex; 
+}

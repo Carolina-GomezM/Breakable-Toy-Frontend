@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+.home-page {
+    background-image: url('../assets/fondoHomePage.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.artists-container {
+    display: flex;
+    gap: 20px; 
+    overflow-x: auto;
+    padding: 20px;
+    max-width: 90vw;
+    flex-wrap: wrap;
+    padding: 10px;
+    
+}
+
+.artist-card {
+    background-color: white;
+    opacity: 90%;
+    border-radius: 0; 
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    flex-shrink: 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, border 0.3s ease;
+    border: 2px solid #a03181; 
+    position: relative;
+    border-radius: 10%;
+}
+
+
+.artist-card:hover {
+    transform: translate(-4px, -4px); 
+    box-shadow: 8px 8px 0 rgba(255, 105, 180, 0.3); 
+    opacity: 1; 
+    border: 2px solid #ff69b4; 
+}
+
+
+.artist-image {
+    border-radius: 10%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover; 
+    border: 2px solid #792752; 
+    transition: transform 0.3s ease;
+}
+
+
+.artist-card:hover .artist-image {
+    transform: scale(1.1); 
+}
+
+
+.artist-card h2 {
+    color: palevioletred;
+    font-size: 18px;
+    margin: 10px 0 5px;
+    transition: color 0.3s ease;
+    font-family: 'Pixelify Sans', cursive;
+}
+
+
+.artist-card:hover h2 {
+    color: #ff69b4; 
+}
+
+
+.artist-card p {
+    color: pink;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    font-family: 'Pixelify Sans', cursive; 
+}
+
+
+.artist-card:hover p {
+    color: #ff69b4;
+}
+
+.Title-top-artists {
+    color: rgb(169, 72, 104);
+    font-family: 'Pixelify Sans', cursive; 
+}
+
+.search-results-container {
+    display: flex;
+    gap: 20px; 
+    overflow-x: auto; 
+    padding: 20px;
+    max-width: 90vw;
+    flex-wrap: wrap;
+}
+
+.album-card, .track-card, .playlist-card, .artist-card-search {
+    background-color: white;
+    opacity: 90%;
+    border-radius: 0; 
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2); 
+    padding: 15px;
+    width: 300px; 
+    flex-shrink: 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, border 0.3s ease;
+    border: 2px solid #82287d; 
+    display: flex; 
+    align-items: center;
+    gap: 15px; 
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.album-card:hover, .track-card:hover, .playlist-card:hover, .artist-card-search:hover {
+    transform: translate(-4px, -4px); 
+    box-shadow: 8px 8px 0 rgba(255, 105, 180, 0.3); 
+    opacity: 1; 
+    border: 2px solid #ff69b4;
+}
+
+.album-card img, .track-card img, .playlist-card img, .artist-card-search img {
+    width: 80px; 
+    height: 80px;
+    object-fit: cover; 
+    border-radius: 0; 
+    border: 2px solid #400f2f; 
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.album-card:hover img, 
+.track-card:hover img, 
+.playlist-card:hover img,
+.artist-card-search:hover img {
+    transform: scale(1.1); 
+}
+
+.album-card h2, .track-card h2, .playlist-card h2, .artist-card-search h2 {
+    color: palevioletred;
+    font-size: 16px;
+    margin: 0 0 5px;
+    transition: color 0.3s ease;
+    font-family: 'Pixelify Sans', cursive; 
+}
+
+.album-card:hover h2, 
+.track-card:hover h2, 
+.playlist-card:hover h2,
+.artist-card-search:hover h2 {
+    color: #ff69b4;
+}
+
+.album-card p, .track-card p, .playlist-card p, .artist-card-search p {
+    color: pink;
+    font-size: 12px;
+    transition: color 0.3s ease;
+    font-family: 'Pixelify Sans', cursive; 
+}
+
+
+.album-card:hover p, 
+.track-card:hover p, 
+.playlist-card:hover p
+.artist-card-search:hover p {
+    color: #ff69b4; 
+}
+
+.artists-container-search h1, .albums-container h1, .tracks-container h1, .playlists-container h1{
+    color: rgb(169, 72, 104);
+    font-family: 'Pixelify Sans', cursive; 
+    font-size: 30px;
+}
+
+.search-title{
+    margin: 0;
+    color: rgb(169, 72, 104);
+    font-family: 'Pixelify Sans', cursive; 
+    font-size: 40px;
+}
+
+#searchBar{
+    width: 30%;
+    height: 30px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    font-family: 'Pixelify Sans', cursive; 
+    color: #ff69b4;
+    border-color: #ff69b4;
+    text-align: center;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.gif{
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.gif-1{
+    width: 45%;
+    top: 0%;
+    left: 0%;
+}
+
+.gif-2{
+    width: 20%;
+    bottom: 0%;
+    right: 0%;
+}
+
+.gif-3{
+    width: 10%;
+    top: 0%;
+    right: 0%; 
+}
+
+.all {
+    position: relative;
+    z-index: 2;
+}
+
+.spotifyPlayer{
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        height: 30px;
+        width: 100vw;
+        background: yellow;
+}
