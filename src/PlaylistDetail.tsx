@@ -43,7 +43,9 @@ function PlaylistDetail() {
     useEffect(() => {
         const fetchPlaylist = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/playlist/${id}`);
+                const response = await fetch(`http://localhost:8080/playlist/${id}`,{
+                    // mode:'no-cors'
+                });
                 const data = await response.json();
                 setPlaylist(data);
 

@@ -14,7 +14,8 @@ function App() {
         headers: {
             'Content-Type': 'application/json', 
             'Accept': 'text/plain' 
-          }
+          },
+    //   mode:'no-cors'
     }).then(res => (res.text())).then(response => (window.location.href=String(response)))
     }
   

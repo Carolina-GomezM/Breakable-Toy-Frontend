@@ -7,7 +7,9 @@ function ProtectedRoute({ children }: { children: JSX.Element }) {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('http://localhost:8080/check-auth');
+        const response = await fetch('http://localhost:8080/check-auth',{
+          // mode:'no-cors'
+        });
         const data = await response.json();
         setIsAuthenticated(data);
       } catch (error) {

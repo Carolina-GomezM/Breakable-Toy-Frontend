@@ -34,9 +34,9 @@ function App() {
             <Route path="/" element={<LoginPage />} />
           <Route element={<Layout />}>
             <Route path="/home" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
-            <Route path="/artist/:id" element={<ArtistDetail />} />
-            <Route path="/album/:id/:path/:artistId?" element={<AlbumDetail />} />
-            <Route path="/playlist/:id/:path" element={<PlaylistDetail />} />
+            <Route path="/artist/:id" element={<ProtectedRoute><ArtistDetail /></ProtectedRoute>} />
+            <Route path="/album/:id/:path/:artistId?" element={<ProtectedRoute><AlbumDetail /></ProtectedRoute>} />
+            <Route path="/playlist/:id/:path" element={<ProtectedRoute><PlaylistDetail /></ProtectedRoute>} />
             <Route path="/error" element={<PaginaE />} />
           </Route>
         </Routes>

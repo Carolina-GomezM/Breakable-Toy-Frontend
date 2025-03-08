@@ -61,7 +61,10 @@ const HomePage = () => {
 
   useEffect(() => {
     access_token();
-    fetch('http://localhost:8080/me/top/artists')
+    fetch('http://localhost:8080/me/top/artists', {
+      // mode:'no-cors'
+    })
+
       .then(response => response.json())
       .then(data => setTopArtists(data))
       .catch(error => console.error('Error fetching top artists:', error));
@@ -78,7 +81,7 @@ const HomePage = () => {
     try {
       const response = await fetch(`http://localhost:8080/search?query=${encodedQuery}`, {
         method: 'GET',
-        mode:'cors'
+        // mode:'no-cors'
       });
       if (!response.ok) throw new Error('Error in the search');
 

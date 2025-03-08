@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { usePlayer } from './PlayerContext'; 
 import './Styles/SpotifyPlayer.css'
 import { fetchWithAuthRetry } from './auth';
+import { access_token } from './auth';
+
 
 
 const SpotifyPlayer: React.FC = () => {
@@ -32,6 +34,8 @@ const SpotifyPlayer: React.FC = () => {
   
 
   useEffect(() => {
+    access_token();
+
 
     const initializePlayer = async () => {
       const token = accessToken;
@@ -90,6 +94,7 @@ const SpotifyPlayer: React.FC = () => {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${accessToken}`,
           },
+          // mode:'no-cors'
         });
       } catch (error) {
         console.error('Error al reproducir la pista:', error);
@@ -109,6 +114,7 @@ const SpotifyPlayer: React.FC = () => {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${accessToken}`,
           },
+          // mode:'no-cors'
         });
         setIsPaused(!isPaused);
       } catch (error) {

@@ -45,12 +45,16 @@ function ArtistDetail() {
 
     useEffect(() => {
 
-        fetch(`http://localhost:8080/artists/${id}`)
+        fetch(`http://localhost:8080/artists/${id}`,{
+            // mode:'no-cors'
+        })
             .then(response => response.json())
             .then(data => setArtist(data))
             .catch(error => console.error('Error fetching artist details:', error));
 
-        fetch(`http://localhost:8080/artist/top-tracks/${id}`)
+        fetch(`http://localhost:8080/artist/top-tracks/${id}`,{
+            // mode:'no-cors'
+        })
             .then(response => response.json())
             .then(data => {
                 console.log(data); 
@@ -62,7 +66,9 @@ function ArtistDetail() {
             })
             .catch(error => console.error('Error fetching top tracks:', error));
 
-        fetch(`http://localhost:8080/artist/album/${id}`)
+        fetch(`http://localhost:8080/artist/album/${id}`,{
+            // mode:'no-cors'
+        })
         .then(response => response.json())
          .then(data => {
                 console.log(data); 

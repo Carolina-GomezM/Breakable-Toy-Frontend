@@ -44,7 +44,9 @@ function AlbumDetail() {
 
     useEffect(() => {
 
-        fetch(`http://localhost:8080/albums/${id}`)
+        fetch(`http://localhost:8080/albums/${id}`, {
+            // mode:'no-cors'
+        })
             .then(response => response.json())
             .then(data => {
                 setAlbum(data);
